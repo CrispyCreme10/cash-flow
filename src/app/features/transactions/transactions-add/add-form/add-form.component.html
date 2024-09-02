@@ -1,0 +1,26 @@
+<div class="add-form-wrap">
+  <form [formGroup]="addTrnForm" (ngSubmit)="onSubmit()">
+    <app-text-input
+      [label]="'Name'"
+      [placeholder]="'Enter Transaction Name'"
+      [isInvalid]="addTrnForm.get('name')?.invalid || false"
+      [errorMessage]="nameErrorMessage()"
+      formControlName="name"
+    ></app-text-input>
+    <app-date-input formControlName="date"></app-date-input>
+    <app-select-autocomplete
+      [label]="'Category'"
+      [placeholder]="'Select Category'"
+      formControlName="category"
+      [options]="categories"
+    ></app-select-autocomplete>
+    <app-number-input
+      [label]="'Amount'"
+      [placeholder]="'Enter Amount'"
+      formControlName="amount"
+    ></app-number-input>
+    <button mat-stroked-button type="submit" [disabled]="!addTrnForm.valid">
+      Submit
+    </button>
+  </form>
+</div>

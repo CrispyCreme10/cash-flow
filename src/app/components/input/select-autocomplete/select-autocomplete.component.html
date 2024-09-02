@@ -1,0 +1,17 @@
+<mat-form-field class="example-full-width">
+  <mat-label>{{ label() }}</mat-label>
+  <input
+    type="text"
+    [placeholder]="placeholder()"
+    aria-label="Number"
+    matInput
+    [formControl]="inputFormControl"
+    [matAutocomplete]="auto"
+    (input)="onInput($event)"
+  />
+  <mat-autocomplete #auto="matAutocomplete">
+    @for (option of filteredOptions | async; track option) {
+      <mat-option [value]="option">{{ option }}</mat-option>
+    }
+  </mat-autocomplete>
+</mat-form-field>

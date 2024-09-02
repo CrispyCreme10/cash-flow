@@ -1,0 +1,28 @@
+.trn-add-wrap {
+  box-sizing: border-box;
+  display: grid;
+  grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+  padding: 5px;
+  grid-gap: 5px;
+  height: 100%;
+}
+
+.mat-mdc-card,
+.mat-mdc-card-content {
+  height: 100%;
+}
+
+.trn-add-form {
+  grid-column: 1 / span 8;
+  grid-row: 1 / span 8;
+}
+
+.trn-add-summary-tbl {
+  grid-column: 9 / span 8;
+  grid-row: 1 / span 8;
+}
+
+.trn-add-bottom-panel {
+  grid-column: 1 / span 16;
+  grid-row: 9 / span 8;
+}

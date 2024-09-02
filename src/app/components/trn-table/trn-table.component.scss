@@ -1,0 +1,25 @@
+.table-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+table {
+  width: 100%;
+}
+
+tr.mat-mdc-footer-row td {
+  font-weight: bold;
+
+  &.positive {
+    color: green;
+  }
+
+  &.negative {
+    color: red;
+  }
+}
